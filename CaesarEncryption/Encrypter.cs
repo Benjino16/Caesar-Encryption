@@ -2,6 +2,13 @@
 {
     public static class Encrypter
     {
+
+        /// <summary>
+        /// Encode a string, with the Caesar Encryption system.
+        /// </summary>
+        /// <param name="text"> The text you want to encode. </param>
+        /// <param name="password"> The password, that will be used to encode the string. </param>
+        /// <returns> Returns the encoded string. </returns>
         public static string Encode(string text, string password)
         {
             string encodedText = "";
@@ -24,6 +31,12 @@
             return encodedText;
         }
 
+        /// <summary>
+        /// Decode a string with the Caesar Encryption system.
+        /// </summary>
+        /// <param name="encryption"></param>
+        /// <param name="password"></param>
+        /// <returns> Returns the decoded string. </returns>
         public static string Decode(string encryption, string password)
         {
             string decodedText = "";
@@ -81,6 +94,11 @@
                 throw new Exception("The letter " + letter + " is not an available character");
             }
             return letters.IndexOf(letter);
+        }
+
+        public static void AddChar(char letter)
+        {
+            letters.Add(letter);
         }
     }
 }
