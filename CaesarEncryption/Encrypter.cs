@@ -76,6 +76,10 @@
 
         public static int GetNumber(char letter)
         {
+            if(!letters.Contains(letter)) 
+            {
+                throw new Exception("The letter " + letter + " is not an available character");
+            }
             return letters.IndexOf(letter);
         }
     }
